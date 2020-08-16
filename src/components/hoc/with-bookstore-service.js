@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { BookstoreServiceConsumer } from "../bookstore-service-context";
+import { BookstoreServiceConsumer } from '../bookstore-service-context';
 
 const withBookstoreService = () => (Wrapped) => {
   return (props) => {
@@ -14,8 +14,4 @@ const withBookstoreService = () => (Wrapped) => {
   };
 };
 
-export { withBookstoreService };
-
-/* 
-TODO: реализовать mapMethodsToProps для передачи методов сервиса в компонент Wrapped
- */
+export default withBookstoreService;
