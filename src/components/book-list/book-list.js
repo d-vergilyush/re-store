@@ -11,8 +11,10 @@ import './book-list.css';
 class BookList extends Component {
 
   componentDidMount() {
-    const books = this.props.bookstoreService.getBooks();
-    this.props.booksLoaded(books);
+    const { bookstoreService, booksLoaded } =  this.props;
+
+    bookstoreService.getBooks()
+      .then((data) => booksLoaded(data));
   }
 
   render() {
