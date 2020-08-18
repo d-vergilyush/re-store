@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { booksLoaded, booksRequested, booksFetchError } from "../../actions";
+import { fetchBooks } from "../../actions";
 
 import BookListItem from "../book-list-item";
 import Spinner from "../spinner";
@@ -44,14 +44,8 @@ const mapStateToProps = ({ books, loading, error }) => ({
   error,
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchBooks: () => {
-    dispatch(booksRequested());
-    ownProps.bookstoreService
-      .getBooks()
-      .then((data) => dispatch(booksLoaded(data)))
-      .catch((err) => dispatch(booksFetchError(err)));
-  }
+const mapDispatchToProps = (dispatch, { bookstoreService }) => ({
+  fetchBooks: fetchBooks(bookstoreService, dispatch)
 });
 
 export default compose(
