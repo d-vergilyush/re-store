@@ -1,5 +1,15 @@
 .shopping-cart-table {
-  margin-top: 45px;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.shopping-cart-table .table {
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.shopping-cart-table th, .shopping-cart-table td {
+  vertical-align: middle;
 }
 
 .shopping-cart-table .total {
@@ -10,5 +20,4 @@
 
 .shopping-cart-table button {
   margin-left: 5px;
-  margin-top: 5px;
 }
