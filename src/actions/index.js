@@ -20,12 +20,12 @@ const fetchBooks = (bookstoreService, dispatch) => () => {
     .catch((err) => dispatch(booksFetchError(err)));
 }
 
-const onAddedToCart = (bookId) => ({
+const bookAddedToCart = (bookId) => ({
   type: "BOOKS_ADDED_TO_CART",
   payload: bookId
 });
 
 export {
   fetchBooks,
-  onAddedToCart
+  bookAddedToCart
 };
