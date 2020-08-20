@@ -7,17 +7,17 @@ const initialState = {
 };
 
 const updateCartItems = (cartItems, item, idx) => {
-  if (item.quantity === 0) {
-    return [
-      ...cartItems.slice(0, idx),
-      ...cartItems.slice(idx + 1)
-    ];
-  }
-
   if (idx === -1) {
     return [
       ...cartItems,
       item
+    ];
+  }
+  
+  if (item.quantity === 0) {
+    return [
+      ...cartItems.slice(0, idx),
+      ...cartItems.slice(idx + 1)
     ];
   }
 
@@ -52,11 +52,11 @@ const updateOrder = (state, bookId, quantityDiff) => {
   const book = books.find(({id}) => id === bookId);
   const itemIndex = cartItems.findIndex(({id}) => id === bookId);
   const item = cartItems[itemIndex];
-  const newItem = updateCartItem(book, item, quantityDiff);
+  const currentItem = updateCartItem(book, item, quantityDiff);
   
   return {
     ...state,
-    cartItems: updateCartItems(cartItems, newItem, itemIndex)
+    cartItems: updateCartItems(cartItems, currentItem, itemIndex)
   };
 }
 
