@@ -21,20 +21,22 @@ const updateCartItems = (cartItems, item, idx) => {
   ];
 };
 
-const updateCartItem = (book, item = {}) => {
+const updateCartItem = (book, item) => {
 
-  const {
-    id = book.id,
-    quantity = 0,
-    title = book.title,
-    total = 0 } = item;
-
-  return {
-    id,
-    title,
-    quantity: quantity + 1,
-    total: total + book.price
-  };
+  if(item) {
+    return {
+      ...item,
+      quantity: item.quantity + 1,
+      total: item.total + book.price
+    }
+  } else {
+    return {
+      id: book.id,
+      title: book.title,
+      quantity: 1,
+      total: book.price
+    };
+  }
 };
 
 const reducer = (state = initialState, action) => {
