@@ -1,14 +1,14 @@
 const booksLoaded = (newBooks) => ({
-  type: "FETCH_BOOKS_REQUEST",
+  type: 'FETCH_BOOKS_REQUEST',
   payload: newBooks
 });
 
 const booksRequested = () => ({
-  type: "FETCH_BOOKS_SUCCESS",
+  type: 'FETCH_BOOKS_SUCCESS',
 });
 
 const booksFetchError = (error) => ({
-  type: "FETCH_BOOKS_FAILURE",
+  type: 'FETCH_BOOKS_FAILURE',
   payload: error
 });
 
@@ -21,7 +21,7 @@ const fetchBooks = (bookstoreService, dispatch) => () => {
 }
 
 const bookAddedToCart = (bookId) => ({
-  type: "BOOKS_ADDED_TO_CART",
+  type: 'BOOKS_ADDED_TO_CART',
   payload: bookId
 });
 
