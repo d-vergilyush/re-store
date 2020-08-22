@@ -12,13 +12,13 @@ const booksFetchError = (error) => ({
   payload: error
 });
 
-const fetchBooks = (bookstoreService, dispatch) => () => {
+const fetchBooks = (bookstoreService) => () => (dispatch) => {
   dispatch(booksRequested());
   bookstoreService
     .getBooks()
     .then((data) => dispatch(booksLoaded(data)))
     .catch((err) => dispatch(booksFetchError(err)));
-}
+};
 
 const bookAddedToCart = (bookId) => ({
   type: 'BOOKS_ADDED_TO_CART',
