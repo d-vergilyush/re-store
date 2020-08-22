@@ -13,7 +13,13 @@ export default class BookstoreService {
       title: 'Release It!',
       author: 'Michael T. Nygard',
       price: 45,
-      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/414CRjLjwgL._SX403_BO1,204,203,200_.jpg'}
+      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/414CRjLjwgL._SX403_BO1,204,203,200_.jpg'},
+    {
+      id: 3,
+      title: 'Learning React',
+      author: 'Alex Banks',
+      price: 47,
+      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51FHuacxYjL._SX379_BO1,204,203,200_.jpg'}
   ];
 
   getBooks() {
