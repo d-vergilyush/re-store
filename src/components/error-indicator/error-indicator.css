@@ -1,0 +1,7 @@
+.error-indicator {
+  padding: 20px 0;
+}
+
+.error-indicator .msg {
+  font-size: 1.1rem;
+}
