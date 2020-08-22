@@ -28,3 +28,22 @@
 .book-list-item .book-details .book-price {
   font-size: 1.4rem;
 }
+
+@media only screen and (max-width: 420px) {
+  .book-list-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .book-list-item .book-cover {
+    margin-right: 20px;
+  }
+
+  .book-list-item .book-details {
+    padding-bottom: 0;
+  }
+
+  .book-list-item .book-details .book-title {
+    font-size: 1.1rem;
+  }
+}
