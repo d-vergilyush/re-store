@@ -1,6 +1,6 @@
 .shop-header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,3 +23,23 @@
   margin-right: 10px;
 }
 
+@media only screen and (max-width: 420px) {
+  .shop-header {
+    margin: 0;
+  }
+
+  .shop-header .logo {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .shop-header .shopping-cart .cart-icon {
+    font-size: 1.8rem;
+    margin-right: 5px;
+  }
+
+  .shop-header .shopping-cart {
+    font-size: 1.1rem;
+    padding-right: 0;
+  }
+}
